@@ -5,12 +5,25 @@
 <title>SE 3316 Lab 1</title>
 <meta name="description" content="">
 <meta name="author" content="">
-<link rel="stylesheet" href="">
+<link rel="stylesheet" type="text/css" href="styles.css">
+<script src="script.js" defer></script>
 </head>
 <body>
 <!-- Place your content here -->
 <h1>SE 3316 Lab 1</h1>
 <p>Hello World!</p>
+<div class="search-container">
+    <div>
+        <label for="nameSearch">Search by Name:</label>
+        <input type="text" id="nameSearch" placeholder="Enter country name">
+        <button id="nameSearchBtn">Search</button>
+    </div>
+    <div>
+        <label for="currencySearch">Search by Currency Code:</label>
+        <input type="text" id="currencySearch" placeholder="Enter currency code">
+        <button id="currencySearchBtn">Search</button>
+    </div>
+</div>
 <div class ="country-list">
     <div class ="country">
         <img src="us.png" alt="America Flag">
