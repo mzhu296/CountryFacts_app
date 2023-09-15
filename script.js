@@ -1,14 +1,30 @@
 // Sample data (replace with your actual data)
 const countriesData = [
-    {
-        name: "United States of America",
-        currency: "United States Dollar (USD)",
-    },
+    {name: "United States of America", currency: "USD",},
+    {name: "People's Republic of China", currency: "CHY",},
+    {name: "Canada", currency: "CAD",},   
+    {name: "India", currency: "INR",},
+    {name: "Japan", currency: "JPY",},
+    {name: "France", currency: "EUR",},
+    {name: "Germany", currency: "EUR",},
     // Add data for other countries
 ];
 
 document.getElementById('nameSearchBtn').addEventListener('click', searchByName);
 document.getElementById('currencySearchBtn').addEventListener('click', searchByCurrency);
+
+document.getElementById('nameSearch').addEventListener('keyup', function (event) {
+    if (event.key === "Enter") {
+        searchByName();
+    }
+});
+
+document.getElementById('currencySearch').addEventListener('keyup', function (event) {
+    if (event.key === "Enter") {
+        searchByCurrency();
+    }
+});
+
 
 function searchByName() {
     const nameSearchValue = document.getElementById('nameSearch').value.trim();
@@ -21,7 +37,7 @@ function searchByName() {
 
 function searchByCurrency() {
     const currencySearchValue = document.getElementById('currencySearch').value.trim();
-    if (!/^[A-Z]{3}$/.test(currencySearchValue)) {
+    if (!/^[A-Z]+$/.test(currencySearchValue)) {
         alert("Invalid input for Currency search. Please enter three uppercase letters (A-Z).");
         return;
     }
@@ -40,7 +56,6 @@ function displayResults(query, type) {
             break;
         }
     }
-
     if (matches.length === 0) {
         alert("No matches found.");
     } else {
@@ -52,14 +67,6 @@ function displayResults(query, type) {
     }
 }
 
-document.getElementById('nameSearch').addEventListener('keyup', function (event) {
-    if (event.key === "Enter") {
-        searchByName();
-    }
-});
-
-document.getElementById('currencySearch').addEventListener('keyup', function (event) {
-    if (event.key === "Enter") {
-        searchByCurrency();
-    }
-});
+function convertToUppercase(inputElement) {
+    inputElement.value = inputElement.value.toUpperCase();
+}

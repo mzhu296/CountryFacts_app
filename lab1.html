@@ -15,12 +15,13 @@
 <div class="search-container">
     <div>
         <label for="nameSearch">Search by Name:</label>
-        <input type="text" id="nameSearch" placeholder="Enter country name">
+        <input type="text" id="nameSearch" placeholder="Enter country name" maxlength="20">
         <button id="nameSearchBtn">Search</button>
     </div>
     <div>
         <label for="currencySearch">Search by Currency Code:</label>
-        <input type="text" id="currencySearch" placeholder="Enter currency code">
+        <input type="text" id="currencySearch" placeholder="Enter currency code" maxlength="3" oninput="convertToUppercase(this)">
+        <!-- <input type="text" id="currencySearch" placeholder="Enter currency code"> -->
         <button id="currencySearchBtn">Search</button>
     </div>
 </div>
@@ -61,11 +62,11 @@
         <a href="https://en.wikipedia.org/wiki/Japan" target="_blank">https://en.wikipedia.org/wiki/Japan</a>
     </div>
     <div class="country">
-        <img src="images/fr.png" alt="French Flag">
-        <h2>French</h2>
-        <p>Currency: Japanese Yen (JPY)</p>
-        <p>Region: Hokkaido, Tohoku, Kanto, Chubu, Kinki, Chugoku, Shikoku, and Kyushu-Okinawa</p>
-        <a href="https://en.wikipedia.org/wiki/Japan" target="_blank">https://en.wikipedia.org/wiki/Japan</a>
+        <img src="images/fr.png" alt="France Flag">
+        <h2>France</h2>
+        <p>Currency: Euro (EUR)</p>
+        <p>Region: Île-de-France, Berry, Orléanais, Normandy, Languedoc, Lyonnais, Dauphiné, Champagne, Aunis, Saintonge, Poitou, Guyenne and Gascony, Burgundy, Picardy, Anjou, Provence, Angoumois, Bourbonnais, Marche, Brittany, Maine, Touraine, Limousin, Foix, Auvergne, Béarn, Alsace, Artois, Roussillon, Flanders and Hainaut, Franche-Comté, Lorraine and Barrois, Trois-Évêchés, Metz, Toul and Verdun, Corsica, Nivernais</p>
+        <a href="https://en.wikipedia.org/wiki/France" target="_blank">https://en.wikipedia.org/wiki/France/a>
     </div>
 </div>
 <!-- Embedded JavaScript go here -->
