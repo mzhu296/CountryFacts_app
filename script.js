@@ -1,4 +1,3 @@
-// Sample data (replace with your actual data)
 const countriesData = [
     {name: "United States of America", currency: "USD",},
     {name: "People's Republic of China", currency: "CHY",},
@@ -15,7 +14,8 @@ const countriesData = [
     {name: "Vietnam", currency: "VND",},
     {name: "Switzerland", currency: "CHF",},
     {name: "Australia", currency: "AUD",},
-    // Add data for other countries
+    {name: "Singapore", currency: "SGD",},
+    {name: "Brazil", currency: "BRL",},
 ];
 
 document.getElementById('nameSearchBtn').addEventListener('click', searchByName);
