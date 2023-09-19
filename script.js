@@ -7,6 +7,14 @@ const countriesData = [
     {name: "Japan", currency: "JPY",},
     {name: "France", currency: "EUR",},
     {name: "Germany", currency: "EUR",},
+    {name: "Italy", currency: "EUR",},
+    {name: "Spain", currency: "EUR",},
+    {name: "Portugal", currency: "EUR",},
+    {name: "Finland", currency: "EUR",},
+    {name: "Ireland", currency: "EUR",},
+    {name: "Vietnam", currency: "VND",},
+    {name: "Switzerland", currency: "CHF",},
+    {name: "Australia", currency: "AUD",},
     // Add data for other countries
 ];
 
