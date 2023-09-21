@@ -31,10 +31,9 @@ body {
     margin-bottom: 10px;
 }
 
-.search-container {
+.search-container { 
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between;/*seperate search bar*/
     align-items: center;
 }
-
 
