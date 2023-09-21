@@ -17,6 +17,7 @@ body {
     margin: 10px 0;
     overflow: hidden;
     width: 100%;
+    /* width: calc(20% - 20px); 20% width for 5 items per row with 10px margin */
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -29,3 +30,11 @@ body {
     max-width: 100px;
     margin-bottom: 10px;
 }
+
+.search-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+

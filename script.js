@@ -75,6 +75,7 @@ function displayResults(query, type) {
     }
 }
 
-function convertToUppercase(inputElement) {
+//convert to uppercase when currency code is typed
+function convertToUppercase(inputElement) { 
     inputElement.value = inputElement.value.toUpperCase();
 }
