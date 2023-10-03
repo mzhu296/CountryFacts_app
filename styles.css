@@ -32,9 +32,8 @@ body {
     margin-bottom: 10px;
 }
 
-/* Add this style rule to change the background color of search results */
 #searchResults {
-    background-color: #d1e824; /* Change to your desired background color */
+    background-color: #dbf60b; /* Change to your desired background color */
     border: 3px solid #000200; /* Change to your desired border color */
     padding: 20px;
 }

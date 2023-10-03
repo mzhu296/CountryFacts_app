@@ -17,7 +17,13 @@ document.addEventListener("DOMContentLoaded", function () {
       while (searchResults.firstChild) {
         searchResults.removeChild(searchResults.firstChild);
       }
-      
+  
+      // Hide the search results container if the search term is empty
+      if (searchTerm.trim() === "") {
+        searchResults.style.display = "none";
+        return;
+      }
+  
       // Loop through the country list and add matching items to the search results
       const countries = document.querySelectorAll(".country");
       let hasResults = false; // Flag to check if there are any results
