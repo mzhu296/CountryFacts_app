@@ -12,6 +12,10 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   
     function updateSearchResults(searchTerm) {
+       // Remove all child elements from the search results container
+       while (searchResults.firstChild) {
+        searchResults.removeChild(searchResults.firstChild);
+       }
       // Loop through the country list and add matching items to the search results
       const countries = document.querySelectorAll(".country")
   
