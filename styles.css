@@ -1,6 +1,8 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #1c8fc8; 
+    background-color: #1c8fc8;
+    margin: 0;
+    padding: 0;
 }
 
 .country-list {
@@ -17,13 +19,12 @@ body {
     margin: 10px 0;
     overflow: hidden;
     width: 100%;
-    /* width: calc(20% - 20px); 20% width for 5 items per row with 10px margin */
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    background-color: #5a93a0; 
+    background-color: #5a93a0;
 }
 
 .country img {
@@ -31,9 +32,9 @@ body {
     margin-bottom: 10px;
 }
 
-.search-container { 
-    display: flex;
-    justify-content: space-between;/*seperate search bar*/
-    align-items: center;
+/* Add this style rule to change the background color of search results */
+#searchResults {
+    background-color: #d1e824; /* Change to your desired background color */
+    border: 3px solid #000200; /* Change to your desired border color */
+    padding: 20px;
 }
-

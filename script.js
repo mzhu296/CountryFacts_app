@@ -1,61 +1,27 @@
-document.getElementById('nameSearchBtn').addEventListener('click', searchByName);
-document.getElementById('currencySearchBtn').addEventListener('click', searchByCurrency);
-
-document.getElementById('nameSearch').addEventListener('keyup', function (event) {
-    if (event.key === "Enter") {
-        searchByName();
-    }
-});
-
-document.getElementById('currencySearch').addEventListener('keyup', function (event) {
-    if (event.key === "Enter") {
-        searchByCurrency();
-    }
-});
-
-
-function searchByName() {
-    const nameSearchValue = document.getElementById('nameSearch').value.trim();
-    if (nameSearchValue.length > 20 || /\d/.test(nameSearchValue)) {
-        alert("Invalid input for Name search.");
-        return;
-    }
-    displayResults(nameSearchValue.toLowerCase(), "name");
-}
-
-function searchByCurrency() {
-    const currencySearchValue = document.getElementById('currencySearch').value.trim();
-    if (!/^[A-Z]+$/.test(currencySearchValue)) {
-        alert("Invalid input for Currency search. Please enter three uppercase letters (A-Z).");
-        return;
-    }
-    displayResults(currencySearchValue, "currency");
-}
-
-function displayResults(query, type) {
-    let matches = [];
-    for (const country of countriesData) {
-        if (type === "name" && country.name.toLowerCase().includes(query)) {
-            matches.push(country);
-        } else if (type === "currency" && country.currency.toUpperCase().includes(query)) {
-            matches.push(country);
+document.addEventListener("DOMContentLoaded", function () {
+    // Get references to the search input and content block
+    const nameSearchInput = document.getElementById("nameSearch");
+    const searchResults = document.createElement("div");
+    searchResults.id = "searchResults";
+    document.querySelector(".search-container").appendChild(searchResults);
+  
+    // Event listener for input changes in the name search box
+    nameSearchInput.addEventListener("input", function () {
+      const searchTerm = nameSearchInput.value.toLowerCase();
+      updateSearchResults(searchTerm);
+    });
+  
+    function updateSearchResults(searchTerm) {
+      // Loop through the country list and add matching items to the search results
+      const countries = document.querySelectorAll(".country")
+  
+      countries.forEach(function (country) {
+        const countryName = country.querySelector("h2").textContent.toLowerCase();
+        if (countryName.includes(searchTerm)) {
+          const clone = country.cloneNode(true);
+          searchResults.appendChild(clone);
         }
-        if (matches.length >= 5) {
-            break;
-        }
+      });
     }
-    if (matches.length === 0) {
-        alert("No matches found.");
-    } else {
-        let message = "Matches found:\n";
-        for (const match of matches) {
-            message += `- ${match.name} (${match.currency})\n`;
-        }
-        alert(message);
-    }
-}
-
-//convert to uppercase when currency code is typed
-function convertToUppercase(inputElement) { 
-    inputElement.value = inputElement.value.toUpperCase();
-}
+  });
+  
