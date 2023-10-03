@@ -1,3 +1,23 @@
+const countriesData = [
+    {name: "United States of America", currency: "USD",},
+    {name: "People's Republic of China", currency: "CHY",},
+    {name: "Canada", currency: "CAD",},   
+    {name: "India", currency: "INR",},
+    {name: "Japan", currency: "JPY",},
+    {name: "France", currency: "EUR",},
+    {name: "Germany", currency: "EUR",},
+    {name: "Italy", currency: "EUR",},
+    {name: "Spain", currency: "EUR",},
+    {name: "Portugal", currency: "EUR",},
+    {name: "Finland", currency: "EUR",},
+    {name: "Ireland", currency: "EUR",},
+    {name: "Vietnam", currency: "VND",},
+    {name: "Switzerland", currency: "CHF",},
+    {name: "Australia", currency: "AUD",},
+    {name: "Singapore", currency: "SGD",},
+    {name: "Brazil", currency: "BRL",},
+];
+
 document.getElementById('nameSearchBtn').addEventListener('click', searchByName);
 document.getElementById('currencySearchBtn').addEventListener('click', searchByCurrency);
 
