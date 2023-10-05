@@ -36,7 +36,8 @@ document.addEventListener("DOMContentLoaded", function () {
             if (searchType === "name") {
                 textToSearch = country.querySelector("h2").textContent.toLowerCase();
             } else if (searchType === "currency") {
-                textToSearch = country.querySelector("h3").textContent.toUpperCase();
+                // Remove the "Currency:" prefix before checking
+                textToSearch = country.querySelector("h3").textContent.replace("Currency: ", "").toUpperCase();
             }
 
             if (textToSearch.includes(keyword)) {
