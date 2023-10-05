@@ -31,8 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Loop through the country list and add matching items to the search results
         const countries = document.querySelectorAll(".country");
 
-        for (let i = 0; i < countries.length; i++) {
-            const country = countries[i];
+        countries.forEach(function (country) {
             let textToSearch = "";
             if (searchType === "name") {
                 textToSearch = country.querySelector("h2").textContent.toLowerCase();
@@ -44,6 +43,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 const clone = country.cloneNode(true);
                 searchResults.appendChild(clone);
             }
-        }
+        });
     }
 });
